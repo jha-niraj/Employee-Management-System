@@ -46,7 +46,7 @@ const FormComponent = () => {
             imgData.append('file', formData.img);
 
             try {
-                const imgUploadResponse = await fetch('http://localhost:3002/upload', {
+                const imgUploadResponse = await fetch('http://localhost:3005/upload', {
                     method: 'POST',
                     body: imgData,
                 });
@@ -68,7 +68,7 @@ const FormComponent = () => {
 
                 delete dataToSend.img;
 
-                const response = await fetch('http://localhost:3002/employee/create', {
+                const response = await fetch('http://localhost:3005/employee/create', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ function EmployeeList() {
     useEffect(() => {
         const fetchEmployees = async () => {
             try {
-                const response = await axios.get("http://localhost:3002/employee/allemployees");
+                const response = await axios.get("http://localhost:3005/employee/allemployees");
                 setEmployees(response.data.employees);
                 setFilteredEmployee(response.data.employees);
             } catch (err) {
@@ -35,7 +35,7 @@ function EmployeeList() {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this employee?')) {
             try {
-                const response = await axios.post(`http://localhost:3002/employee/delete`, {
+                const response = await axios.post(`http://localhost:3005/employee/delete`, {
                     id
                 });
                 if (!response) {
@@ -65,7 +65,7 @@ function EmployeeList() {
         }
     }
 
-    const routeForImage = "http://localhost:3002";
+    const routeForImage = "http://localhost:3005";
 
     return (
         <section className="flex flex-col min-h-screen">

@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { Admin } = require("../modal");
 const { adminSignInSchema } = require("../zod");
 
-router.post("/signin", async (req, res) => {
+router.post("/signin", async(req, res) => {
     const { username, password } = req.body;
 
     try {
@@ -38,7 +38,7 @@ router.post("/signin", async (req, res) => {
                 })
             }
         }
-    } catch (err) {
+    } catch(err) {
         console.log("Error: " + err);
         res.status(501).json({
             msg: "Error while signin!!!"

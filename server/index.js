@@ -6,7 +6,6 @@ const adminRoutes = require("./routes/adminRoutes");
 const employeeRoutes = require("./routes/employeeRoutes");
 const PORT = process.env.PORT;
 const cookieParser = require("cookie-parser");
-require("dotenv").config();
 const multer = require("multer");
 const path = require("path");
 
